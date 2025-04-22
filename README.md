@@ -13,3 +13,5 @@
 ### Durdurmak için
 
     docker compose -f docker-compose.yaml down
+## EK Bilgi
+    client bilgileri güvenlik amaçlı gizlenmiştir, çalıştırma aşamasında kodun ilgili bölümüne kullanılacak client bilgisi girilmelidir!!!
