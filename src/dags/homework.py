@@ -12,8 +12,7 @@ from pymongo.server_api import ServerApi
 
 
 client = MongoClient(
-    "mongodb+srv://cetingokhan:cetingokhan@cluster0.ff5aw.mongodb.net/"
-    "?retryWrites=true&w=majority&appName=Cluster0",
+    "Hocam bu kısmı github'a public yazdığım için siliyorum",
     server_api=ServerApi("1")
 )
 db = client["bigdata_training"]
