@@ -23,7 +23,6 @@ COLL_USER      = "user_coll_OrkunEnesYuksel"
 COLL_SAMPLE    = COLL_USER + "_sample"
 COLL_ANOMALIES = COLL_USER + "_anomalies"
 
-# Postgres (Airflow) bağlantı bilgileri
 PG_CONN = {
     "host":     "postgres",
     "port":     5432,
@@ -34,7 +33,7 @@ PG_CONN = {
 
 default_args = {
     "owner":      "you",
-    "start_date": datetime(2025, 1, 1),  # bugünden önce bir tarih
+    "start_date": datetime(2025, 1, 1), 
     "retries":    1,
     "retry_delay": timedelta(minutes=5),
 }
@@ -109,7 +108,6 @@ with DAG(
 
     final = DummyOperator(task_id="finaltask")
 
-    # flow.png’e uygun DAG çatısı
     start >> [t1, t2]
     t1    >> final
     t2    >> t3 >> final
